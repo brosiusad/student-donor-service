@@ -1,0 +1,22 @@
+{
+  "name": "student-donor-service",
+  "version": "0.0.1",
+  "description": "Provides a back-end, Postgres-fed web service for the Student/Donor application",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@heroku.com:student-donor-service.git"
+  },
+  "keywords": [
+    "postgresql",
+    "node.js"
+  ],
+  "author": "Artie Brosius, brosiusad@gmail.com",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.5.0"
+  }
+}

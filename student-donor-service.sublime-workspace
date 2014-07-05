@@ -1,0 +1,1909 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"temp_p",
+				"temp_productMasters"
+			],
+			[
+				"Pro",
+				"Product_Master__c"
+			],
+			[
+				"output",
+				"apex:outputPanel"
+			],
+			[
+				"suppr",
+				"suppressAttnLineShipTo"
+			],
+			[
+				"opp",
+				"oppContact"
+			],
+			[
+				"supp",
+				"suppressAttnLineShipTo"
+			],
+			[
+				"custo",
+				"customerName"
+			],
+			[
+				"sub",
+				"PUBLIC substringBetween(String tag) 	String"
+			],
+			[
+				"temp",
+				"template"
+			],
+			[
+				"ALL",
+				"PUBLIC ALLOW_OPPTY_REOPEN	Boolean"
+			],
+			[
+				"A",
+				"PUBLIC ALLOW_OPPTY_CLOSEDWON	Boolean"
+			],
+			[
+				"up",
+				"PUBLIC updateToOpenRecordType(LIST oppsToProcess) 	void"
+			],
+			[
+				"opps",
+				"oppsNewlyClosed"
+			],
+			[
+				"u",
+				"PUBLIC updateIntuitTermsField(LIST oppsToProcess) 	void"
+			],
+			[
+				"Opp",
+				"Opportunity	[Sobject Name]"
+			],
+			[
+				"sess",
+				"sessionId"
+			],
+			[
+				"sessio",
+				"sessionId"
+			],
+			[
+				"canc",
+				"cancelRef"
+			],
+			[
+				"Admin",
+				"Admin_Credentials__c	[Sobject Name]"
+			],
+			[
+				"get",
+				"PUBLIC getAdminCredentials(String settingName) 	Admin_Credentials__c"
+			],
+			[
+				"Admi",
+				"Admin_Credentials__c	[Sobject Name]"
+			],
+			[
+				"sett",
+				"settingName"
+			],
+			[
+				"clic",
+				"clientSecret"
+			],
+			[
+				"cli",
+				"clientId"
+			],
+			[
+				"SUP",
+				"PUBLIC SUPPRESS_UPDATE_QOH	Boolean"
+			],
+			[
+				"map",
+				"map_oppId2Operation"
+			],
+			[
+				"map_",
+				"map_oppId2Opptys"
+			],
+			[
+				"Oppo",
+				"OpportunityLineItems"
+			],
+			[
+				"Ass",
+				"Asset_Item__c"
+			],
+			[
+				"AEDOpp",
+				"AEDTestOpptyLineItemListExt"
+			],
+			[
+				"AEDO",
+				"AEDOpptyLineItemList	[Visualforce Page]"
+			],
+			[
+				"outp",
+				"apex:outputLink"
+			],
+			[
+				"pageBlo",
+				"apex:pageBlock"
+			],
+			[
+				"ou",
+				"apex:outputText"
+			],
+			[
+				"name",
+				"nameTextToReplace"
+			],
+			[
+				"g",
+				"PUBLIC generatePdfAndSendEmail(Id opptyId, String docType, Boolean paid) 	String"
+			],
+			[
+				"doc",
+				"docTypeParam"
+			],
+			[
+				"s",
+				"PUBLIC emailPDFToClient(Id opptyId, LIST recipients, String pdfType, Boolean paid, Id attachmentId, Boolean isFollowUp) 	void"
+			],
+			[
+				"oc",
+				"ocrWrappers"
+			],
+			[
+				"email",
+				"emailPDFToClient"
+			],
+			[
+				"out",
+				"outboundEmails"
+			],
+			[
+				"oppId",
+				"oppId"
+			],
+			[
+				"head",
+				"headerValue	(String)"
+			],
+			[
+				"page",
+				"apex:pageBlockTable"
+			],
+			[
+				"ow",
+				"oweaId"
+			],
+			[
+				"owe",
+				"oweaId"
+			],
+			[
+				"User",
+				"UserInfo	[Standard Apex Class]"
+			],
+			[
+				"AED",
+				"AEDOpportunityService"
+			],
+			[
+				"pag",
+				"page-break-after"
+			],
+			[
+				"bor",
+				"border-style"
+			],
+			[
+				"Q",
+				"Quantity_On_Hand__c 	Number"
+			],
+			[
+				"AEDOp",
+				"AEDOpportunityTriggerHelper	[Custom Apex Class]"
+			],
+			[
+				"SUPP",
+				"PUBLIC SUPPRESS_PAYMENT_TERMS_UPDATE	Boolean"
+			],
+			[
+				"oppsToP",
+				"oppsToProcessForTerms"
+			],
+			[
+				"Quot",
+				"Quote_Email_Body_Custom__c 	LongTextArea"
+			],
+			[
+				"acc",
+				"accsToUpdate"
+			],
+			[
+				"O",
+				"OwnerId"
+			],
+			[
+				"foll",
+				"followUp"
+			],
+			[
+				"AEDAsse",
+				"AEDAssetExpirationEmailSched	[Custom Apex Class]"
+			],
+			[
+				"AEDAss",
+				"AEDAssetExpirationTasksBatch	[Custom Apex Class]"
+			],
+			[
+				"AEDAssetE",
+				"AEDAssetExpirationTasksBatch	[Custom Apex Class]"
+			],
+			[
+				"crea",
+				"createAssetReminderTasks"
+			],
+			[
+				"Expiration_Em",
+				"Expiration_Email_Sent__c"
+			],
+			[
+				"Expiration",
+				"Expiration_Email_Needed__c"
+			],
+			[
+				"asset",
+				"assetsToUpdate"
+			],
+			[
+				"Expi",
+				"Expiration_Reminder_Task_Needed__c"
+			],
+			[
+				"remin",
+				"reminderTasks"
+			],
+			[
+				"Con",
+				"ContentType"
+			],
+			[
+				"emai",
+				"emailAtt"
+			],
+			[
+				"Atta",
+				"Attachment"
+			],
+			[
+				"own",
+				"ownerName"
+			],
+			[
+				"att",
+				"attachmentId"
+			],
+			[
+				"assert",
+				"assertEquals()"
+			],
+			[
+				"In",
+				"Intuit_SFforQB__Transaction_Type__c"
+			],
+			[
+				"Send",
+				"SenderName"
+			],
+			[
+				"Sen",
+				"SenderEmail"
+			],
+			[
+				"ass",
+				"assetsCreated"
+			],
+			[
+				"Su",
+				"PUBLIC SUPPRESS_SALES_REP_ASSIGNMENT	Boolean"
+			],
+			[
+				"createA",
+				"createAssetTasks"
+			],
+			[
+				"Task",
+				"Task__c"
+			],
+			[
+				"oppI",
+				"oppIdsToProcess"
+			],
+			[
+				"creat",
+				"createAssetTasks"
+			],
+			[
+				"Acco",
+				"AccountId"
+			],
+			[
+				"tri",
+				"triggerNewMap"
+			],
+			[
+				"createAss",
+				"PUBLIC createAssetList(Integer num) 	LIST"
+			],
+			[
+				"createCont",
+				"PUBLIC createContactList(Integer num) 	LIST"
+			],
+			[
+				"Acti",
+				"ActivityDate"
+			],
+			[
+				"con",
+				"contactEmailActivities"
+			],
+			[
+				"Pack",
+				"Package_Product__c"
+			],
+			[
+				"prod",
+				"productIds"
+			],
+			[
+				"SendEm",
+				"SendEmailError"
+			],
+			[
+				"asse",
+				"assetsToUpdate"
+			],
+			[
+				"ase",
+				"assetsToUpdate"
+			],
+			[
+				"SendEma",
+				"SendEmailResult"
+			],
+			[
+				"Acc",
+				"AccountId"
+			],
+			[
+				"do",
+				"PRIVATE doExecute(LIST scope) 	void"
+			],
+			[
+				"pro",
+				"processedAllOpps"
+			],
+			[
+				"re",
+				"result"
+			],
+			[
+				"trig",
+				"triggerNewMap"
+			],
+			[
+				"trigg",
+				"triggerOldMap"
+			],
+			[
+				"createOppo",
+				"PUBLIC createOpportunityList(Integer num) 	LIST"
+			],
+			[
+				"Priceboo",
+				"PricebookEntry"
+			],
+			[
+				"createOpp",
+				"PUBLIC createOpportunityLineItem() 	OpportunityLineItem"
+			],
+			[
+				"cr",
+				"PUBLIC createOpportunity() 	Opportunity"
+			],
+			[
+				"create",
+				"PUBLIC createContact() 	Contact"
+			],
+			[
+				"Oppor",
+				"Opportunity"
+			],
+			[
+				"nu",
+				"numberTrimmed"
+			],
+			[
+				"me",
+				"messageSid"
+			],
+			[
+				"pageBl",
+				"apex:pageBlockSection"
+			],
+			[
+				"pageBlock",
+				"apex:pageBlockSection"
+			],
+			[
+				"sho",
+				"showHeader	(Boolean)"
+			],
+			[
+				"random",
+				"randomSentence"
+			],
+			[
+				"scrambl",
+				"scrambleSentence"
+			],
+			[
+				"S",
+				"String"
+			],
+			[
+				"P",
+				"PageReference"
+			],
+			[
+				"pu",
+				"public"
+			],
+			[
+				"in",
+				"input	Tag"
+			],
+			[
+				"sc",
+				"scrambledList"
+			],
+			[
+				"sram",
+				"scrambledSentence"
+			],
+			[
+				"li",
+				"listOfWords"
+			],
+			[
+				"Sc",
+				"scrambledList"
+			],
+			[
+				"ran",
+				"randomWord"
+			],
+			[
+				"list",
+				"listOfWords"
+			],
+			[
+				"i",
+				"Integer"
+			],
+			[
+				"th",
+				"theSentence"
+			],
+			[
+				"MPP",
+				"MPParentController"
+			],
+			[
+				"Pa",
+				"PartnerAPIUrl"
+			],
+			[
+				"part",
+				"PartnerAPIUrl"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 127.0,
+		"selected_items":
+		[
+			[
+				"clean",
+				"MavensMate: Clean Project..."
+			],
+			[
+				"comp",
+				"MavensMate: Compile Project"
+			],
+			[
+				"apex",
+				"Set Syntax: Apex"
+			],
+			[
+				"run",
+				"MavensMate: Run Apex Tests..."
+			],
+			[
+				"edi",
+				"MavensMate: Edit Project..."
+			],
+			[
+				"compi",
+				"MavensMate: Compile Project"
+			],
+			[
+				"metho",
+				"Snippet: Apex method comment"
+			],
+			[
+				"dep",
+				"MavensMate: Deploy To Server..."
+			],
+			[
+				"test",
+				"MavensMate: Run Apex Tests..."
+			],
+			[
+				"run ",
+				"MavensMate: Run Apex Tests..."
+			],
+			[
+				"run ape",
+				"MavensMate: Run Apex Tests..."
+			],
+			[
+				"exe",
+				"MavensMate: Execute Apex..."
+			],
+			[
+				"new pr",
+				"MavensMate: New Project..."
+			],
+			[
+				"apex test",
+				"MavensMate: Run Apex Tests..."
+			],
+			[
+				"tests",
+				"MavensMate: Run Apex Tests..."
+			],
+			[
+				"edit",
+				"MavensMate: Edit Project..."
+			],
+			[
+				"debu",
+				"Snippet: Apex debug statement"
+			],
+			[
+				"Deb",
+				"Snippet: Apex debug statement"
+			],
+			[
+				"debug",
+				"Snippet: Apex debug statement"
+			],
+			[
+				"lint",
+				"SublimeLinter: Next Error"
+			],
+			[
+				"wwra",
+				"Word Wrap: Toggle"
+			],
+			[
+				"javas",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"refre",
+				"MavensMate: Refresh Current File From Server"
+			],
+			[
+				"deploy",
+				"MavensMate: Deploy Resource Bundle..."
+			],
+			[
+				"exc",
+				"MavensMate: Execute Apex..."
+			],
+			[
+				"class",
+				"Snippet: Apex class comment"
+			],
+			[
+				"new cl",
+				"MavensMate: New Apex Class"
+			],
+			[
+				"depl",
+				"MavensMate: Deploy To Server..."
+			],
+			[
+				"open",
+				"MavensMate: Open in Web Browser"
+			],
+			[
+				"ex",
+				"MavensMate: Execute Apex..."
+			],
+			[
+				"new class",
+				"MavensMate: New Apex Class"
+			],
+			[
+				"method",
+				"Snippet: Apex method comment"
+			],
+			[
+				"me",
+				"Snippet: Apex method comment"
+			],
+			[
+				"synt:",
+				"Set Syntax: Apex"
+			],
+			[
+				"set sy:java",
+				"Set Syntax: Java"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"pretti",
+				"HTMLPrettify"
+			],
+			[
+				"new page",
+				"MavensMate: New Visualforce Page"
+			],
+			[
+				"htmlen",
+				"HTML: Encode Special Characters"
+			],
+			[
+				"new cla",
+				"MavensMate: New Apex Class"
+			],
+			[
+				"bloc",
+				"Toggle Block Comment"
+			],
+			[
+				"togg",
+				"Toggle Block Comment"
+			],
+			[
+				"new compo",
+				"MavensMate: New Visualforce Component"
+			],
+			[
+				"json",
+				"Set Syntax: JSON"
+			],
+			[
+				"new pro",
+				"MavensMate: New Project..."
+			],
+			[
+				"resour",
+				"MavensMate: Create Resource Bundle..."
+			],
+			[
+				"lor",
+				"Snippet: Lorem ipsum"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"lin",
+				"SublimeLinter: Next Error"
+			],
+			[
+				"htm",
+				"Set Syntax: HTML"
+			],
+			[
+				"create",
+				"MavensMate: Create Resource Bundle..."
+			],
+			[
+				"mm:dep",
+				"MavensMate: Deploy To Server..."
+			],
+			[
+				"deplo",
+				"MavensMate: Deploy To Server..."
+			],
+			[
+				"refreh",
+				"MavensMate: Refresh Current File From Server"
+			],
+			[
+				"refresh",
+				"MavensMate: Refresh Current File From Server"
+			],
+			[
+				"run t",
+				"MavensMate: Run Apex Tests..."
+			],
+			[
+				"html",
+				"Set Syntax: HTML"
+			],
+			[
+				"apex te",
+				"MavensMate: Run Apex Tests..."
+			],
+			[
+				"comm",
+				"Toggle Comment"
+			],
+			[
+				"refr",
+				"MavensMate: Refresh Current File From Server"
+			],
+			[
+				"wrap",
+				"HTML: Wrap Selection With Tag"
+			],
+			[
+				"new",
+				"MavensMate: New Apex Class"
+			],
+			[
+				"create re",
+				"MavensMate: Create Resource Bundle..."
+			],
+			[
+				"block",
+				"Toggle Block Comment"
+			],
+			[
+				"depo",
+				"MavensMate: Deploy To Server..."
+			],
+			[
+				"blo",
+				"Toggle Block Comment"
+			],
+			[
+				"mm:ref",
+				"MavensMate: Refresh Current File From Server"
+			],
+			[
+				"meth",
+				"Snippet: Apex method comment"
+			],
+			[
+				"new ",
+				"MavensMate: New Apex Class"
+			],
+			[
+				"javasc",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"xml",
+				"Set Syntax: XML"
+			],
+			[
+				"jsh",
+				"JSHint"
+			],
+			[
+				"jshin",
+				"JSHint: Clear Annotations"
+			],
+			[
+				"jshi",
+				"JSHint"
+			],
+			[
+				"jshint",
+				"JSHint"
+			],
+			[
+				"open ",
+				"MavensMate: Open in Web Browser"
+			],
+			[
+				"run te",
+				"MavensMate: Run Apex Tests..."
+			],
+			[
+				"run test",
+				"MavensMate: Run Apex Tests..."
+			],
+			[
+				"class com",
+				"Snippet: Apex class comment"
+			],
+			[
+				"new clas",
+				"MavensMate: New Apex Class"
+			],
+			[
+				"new tri",
+				"MavensMate: New Apex Trigger"
+			],
+			[
+				"apex tes",
+				"MavensMate: Run Apex Tests..."
+			],
+			[
+				"class ",
+				"Snippet: Apex class comment"
+			],
+			[
+				"run tests",
+				"MavensMate: Run Apex Tests..."
+			],
+			[
+				"exce",
+				"MavensMate: Execute Apex..."
+			],
+			[
+				"unit",
+				"MavensMate: Run Async Apex Tests For This Class"
+			],
+			[
+				"new trg",
+				"MavensMate: New Apex Trigger"
+			],
+			[
+				"java",
+				"Set Syntax: Java"
+			],
+			[
+				"method ",
+				"Snippet: Apex method comment"
+			],
+			[
+				"snipp class",
+				"Snippet: Apex class comment"
+			],
+			[
+				"snipp",
+				"Snippet: Apex class comment"
+			],
+			[
+				"new pag",
+				"MavensMate: New Visualforce Page"
+			],
+			[
+				"new vi",
+				"MavensMate: New Visualforce Page"
+			],
+			[
+				"ecx",
+				"MavensMate: Execute Apex..."
+			],
+			[
+				"new trig",
+				"MavensMate: New Apex Trigger"
+			],
+			[
+				"New page",
+				"MavensMate: New Visualforce Page"
+			],
+			[
+				"new ap",
+				"MavensMate: New Visualforce Page"
+			],
+			[
+				"ed",
+				"MavensMate: Edit Project"
+			],
+			[
+				"syntax: txt",
+				"Set Syntax: Plain Text"
+			],
+			[
+				"pack",
+				"Package Control: Install Package"
+			],
+			[
+				"new ape",
+				"MavensMate: New Apex Class"
+			],
+			[
+				"new vis",
+				"MavensMate: New Visualforce Component"
+			],
+			[
+				"exec",
+				"MavensMate: Execute Apex"
+			],
+			[
+				"mm:new",
+				"MavensMate: New Project"
+			],
+			[
+				"new visu",
+				"MavensMate: New Visualforce Page"
+			],
+			[
+				"packag",
+				"Package Control: Install Package"
+			],
+			[
+				"edit ",
+				"MavensMate: Edit Project"
+			],
+			[
+				"synt:javas",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"new p",
+				"MavensMate: New Project"
+			],
+			[
+				"packa ins",
+				"Package Control: Install Package"
+			],
+			[
+				"packa",
+				"Package Control: Add Channel"
+			]
+		],
+		"width": 593.0
+	},
+	"console":
+	{
+		"height": 125.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Users/abrosius/Documents/MavensMate Projects/haka/src/pages/HAKA_ProductSegment.page",
+		"/Users/abrosius/Documents/MavensMate Projects/haka/src/pages/HAKA_ProductAdmin.page",
+		"/Users/abrosius/Documents/MavensMate Projects/haka/src/classes/HAKA_ProductSegmentController.cls",
+		"/Users/abrosius/Documents/MavensMate Projects/haka/src/package.xml",
+		"/Users/abrosius/Documents/MavensMate Projects/haka/src/classes/HAKA_TestDataGenerator.cls",
+		"/Users/abrosius/Documents/MavensMate Projects/haka/src/objects/DefaultMilestone__c.object",
+		"/Users/abrosius/Documents/MavensMate Projects/haka/src/objects/Milestone__c.object",
+		"/Users/abrosius/Documents/MavensMate Projects/haka/src/tabs/Milestone__c.tab",
+		"/Users/abrosius/Documents/MavensMate Projects/haka/src/classes/HAKA_ProductAdminController.cls-meta.xml",
+		"/Users/abrosius/Documents/MavensMate Projects/haka/src/classes/HAKA_ProductCatalogController.cls",
+		"/Users/abrosius/Documents/MavensMate Projects/haka/src/objects/SalesProcess__c.object",
+		"/Users/abrosius/Documents/MavensMate Projects/haka/src/objects/Segment__c.object",
+		"/Users/abrosius/Documents/MavensMate Projects/haka/src/permissionsets/Haka_Sales_Professional.permissionset",
+		"/Users/abrosius/Documents/MavensMate Projects/haka/src/profiles/Haka Sales Professional.profile",
+		"/Users/abrosius/Documents/MavensMate Projects/haka/src/classes/HAKA_TestProductTeamMemberDeletion.cls-meta.xml",
+		"/Users/abrosius/Documents/MavensMate Projects/haka/src/classes/HAKA_TestProductTeamMemberDeletion.cls",
+		"/Users/abrosius/Documents/MavensMate Projects/haka/src/triggers/HAKA_ProductTeamMemberDeletion.trigger-meta.xml",
+		"/Users/abrosius/Documents/MavensMate Projects/haka/src/triggers/HAKA_ProductTeamMemberDeletion.trigger",
+		"/Users/abrosius/Documents/MavensMate Projects/haka/src/pages/HAKA_ProductCatalog.page",
+		"/Users/abrosius/Documents/MavensMate Projects/haka/src/permissionsets/Haka_Product_Team.permissionset",
+		"/Users/abrosius/Documents/MavensMate Projects/haka/src/classes/HAKA_SalesActionController.cls",
+		"/Users/abrosius/Documents/MavensMate Projects/haka/src/classes/HAKA_CloneSalesActionController.cls",
+		"/Users/abrosius/Documents/MavensMate Projects/haka/src/objects/Idea.object",
+		"/Users/abrosius/Documents/MavensMate Projects/haka/src/pages/HAKA_SalesActionEdit.page",
+		"/Users/abrosius/Documents/MavensMate Projects/haka/src/pages/HAKA_PersonaDetail.page-meta.xml",
+		"/Users/abrosius/Documents/MavensMate Projects/haka/src/objects/Persona__c.object",
+		"/Users/abrosius/Documents/MavensMate Projects/haka/src/classes/HAKA_PersonaDetailEditNewController.cls",
+		"/Users/abrosius/Documents/MavensMate Projects/haka/src/pages/HAKA_CloneSalesAction.page",
+		"/Users/abrosius/Documents/MavensMate Projects/haka/src/triggers/HAKA_InsertDateCheck.trigger",
+		"/Users/abrosius/Documents/MavensMate Projects/haka/src/classes/HAKA_TestUtility.cls",
+		"/Users/abrosius/Documents/MavensMate Projects/haka/src/profiles/Haka Product Team.profile",
+		"/Users/abrosius/Documents/MavensMate Projects/haka/src/tabs/Haka_Products_Admin.tab",
+		"/Users/abrosius/Documents/MavensMate Projects/haka/src/pages/HAKA_VOCRecommendationTool.page",
+		"/Users/abrosius/Documents/MavensMate Projects/haka/src/pages/HAKA_PersonaDetailEditNew.page",
+		"/Users/abrosius/Documents/MavensMate Projects/haka/src/pages/HAKA_PersonaDetailEditNew.page-meta.xml",
+		"/Users/abrosius/Documents/MavensMate Projects/haka/src/objects/ProductSegment__c.object",
+		"/Users/abrosius/Documents/MavensMate Projects/haka/src/pages/HAKA_ProductSegmentView.page",
+		"/Users/abrosius/Documents/MavensMate Projects/haka/src/classes/HAKA_TestProductSegmentController.cls",
+		"/Users/abrosius/Documents/MavensMate Projects/haka/src/classes/HAKA_TestSalesActionController.cls",
+		"/Users/abrosius/Documents/MavensMate Projects/haka/src/pages/HAKA_SalesAction.page",
+		"/Users/abrosius/Documents/MavensMate Projects/haka/src/classes/HAKA_TestVOCControllerExtension.cls",
+		"/Users/abrosius/Documents/MavensMate Projects/haka/src/classes/HAKA_ProductAdminController.cls",
+		"/Users/abrosius/Documents/MavensMate Projects/haka/src/classes/HAKA_VOCControllerExtension.cls",
+		"/Users/abrosius/Documents/MavensMate Projects/haka/src/classes/HAKA_TestDataGenerator.cls-meta.xml",
+		"/Users/abrosius/Documents/MavensMate Projects/haka/src/objects/Product2.object",
+		"/Users/abrosius/Documents/MavensMate Projects/haka/src/profiles/Admin.profile",
+		"/Users/abrosius/Documents/MavensMate Projects/haka/haka.sublime-settings",
+		"/Users/abrosius/Documents/MavensMate Projects/haka/src/pages/HAKA_PersonaDetail.page",
+		"/Users/abrosius/Documents/MavensMate Projects/haka/src/classes/HAKA_PersonaDetailController.cls",
+		"/Users/abrosius/Documents/MavensMate Projects/haka/src/layouts/SalesAction__c-SalesAction Layout.layout",
+		"/Users/abrosius/Documents/MavensMate Projects/haka/src/tabs/SalesAction__c.tab",
+		"/Users/abrosius/Documents/MavensMate Projects/haka/src/objects/SalesAction__c.object",
+		"/Users/abrosius/Documents/MavensMate Projects/haka/src/pages/HAKA_VOCRecommendationTool.page-meta.xml",
+		"/Users/abrosius/Documents/MavensMate Projects/haka/src/classes/HAKA_TestProductSegmentController.cls-meta.xml",
+		"/Users/abrosius/Documents/MavensMate Projects/haka/src/classes/HAKA_ProductSegmentViewController.cls-meta.xml",
+		"/Users/abrosius/Documents/MavensMate Projects/haka/src/pages/HAKA_ProductSegmentView.page-meta.xml",
+		"/Users/abrosius/Documents/MavensMate Projects/haka/src/classes/HAKA_ProductSegmentController.cls-meta.xml",
+		"/Users/abrosius/Documents/MavensMate Projects/haka/src/pages/HAKA_ProductSegment.page-meta.xml",
+		"/Users/abrosius/Documents/MavensMate Projects/haka/src/classes/HAKA_ProductSegmentViewController.cls",
+		"/Users/abrosius/Documents/MavensMate Projects/haka/src/layouts/ProductSegment__c-ProductSegment Layout.layout",
+		"/Users/abrosius/Documents/MavensMate Projects/haka/src/objects/DefaultSegmentQualificationCriteria__c.object",
+		"/Users/abrosius/Documents/MavensMate Projects/haka/src/tabs/ProductSegment__c.tab",
+		"/Users/abrosius/Documents/MavensMate Projects/haka/src/layouts/SegmentQualificationCriteria__c-Segment Qualification Criteria Layout.layout",
+		"/Users/abrosius/Documents/MavensMate Projects/haka/src/objects/SegmentQualificationCriteria__c.object",
+		"/Users/abrosius/Documents/MavensMate Projects/haka/src/layouts/Segment__c-Segment Layout.layout",
+		"/Users/abrosius/Documents/MavensMate Projects/haka/src/tabs/Segment__c.tab",
+		"/Users/abrosius/Documents/MavensMate Projects/haka/src/triggers/HAKA_InsertDateCheck.trigger-meta.xml",
+		"/Users/abrosius/Documents/MavensMate Projects/haka/src/tabs/Release__c.tab",
+		"/Users/abrosius/Documents/MavensMate Projects/haka/src/tabs/Product_Catalog.tab",
+		"/Users/abrosius/Documents/MavensMate Projects/haka/src/objects/Pricebook2.object",
+		"/Users/abrosius/Documents/MavensMate Projects/haka/src/objects/Product_Master__c.object",
+		"/Users/abrosius/Documents/MavensMate Projects/haka/src/objects/Activity.object",
+		"/Users/abrosius/Documents/MavensMate Projects/haka/src/objects/VoiceOfTheCustomer__c.object",
+		"/Users/abrosius/Documents/MavensMate Projects/haka/src/objects/Task.object",
+		"/Users/abrosius/Documents/Projects - Active/Haka Products/Development/Force.com security scanner/report_a0W30000013QGF6EAO.xml",
+		"/Users/abrosius/Documents/MavensMate Projects/haka/src/classes/HAKA_TestInsertDateCheck.cls",
+		"/Users/abrosius/Documents/MavensMate Projects/haka/packaging/ignore_considerations.txt",
+		"/Users/abrosius/Documents/MavensMate Projects/haka/haka.sublime-project",
+		"/Users/abrosius/Library/Application Support/Sublime Text 3/Packages/User/mavensmate.sublime-settings",
+		"/Users/abrosius/Documents/MavensMate Projects/haka/config/.org_metadata",
+		"/Users/abrosius/Documents/MavensMate Projects/aed_sandbox/src/workflows/Product.workflow",
+		"/Users/abrosius/Documents/MavensMate Projects/aed_sandbox/src/workflows/Task.workflow",
+		"/Users/abrosius/Documents/MavensMate Projects/aed_sandbox/src/workflows/UserLicense.workflow",
+		"/Users/abrosius/Documents/MavensMate Projects/aed_sandbox/src/classes/AED_PDFController_Model.cls",
+		"/Users/abrosius/Documents/MavensMate Projects/aed_sandbox/src/classes/AED_PDFController.cls",
+		"/Users/abrosius/Documents/MavensMate Projects/aed_sandbox/src/classes/AEDPDFCompController.cls",
+		"/Users/abrosius/Documents/MavensMate Projects/aed_sandbox/src/pages/PackingList.page",
+		"/Users/abrosius/Documents/MavensMate Projects/aed_sandbox/src/components/AEDPDFQuoteInvoiceComponent.component",
+		"/Users/abrosius/Documents/MavensMate Projects/aed_sandbox/src/pages/AEDPDF.page",
+		"/Users/abrosius/Documents/MavensMate Projects/aed_sandbox/src/pages/AED_PDF.page",
+		"/Users/abrosius/Documents/MavensMate Projects/aed_sandbox/src/package.xml",
+		"/Users/abrosius/Documents/MavensMate Projects/aed_sandbox/src/classes/AEDAssetExpirationTasksBatch.cls",
+		"/Users/abrosius/Documents/MavensMate Projects/aed_sandbox/src/classes/AEDOpportunityService.cls",
+		"/Users/abrosius/Documents/MavensMate Projects/aed_sandbox/src/classes/AEDCreateAssetsBatch.cls",
+		"/Users/abrosius/Documents/MavensMate Projects/aed_sandbox/src/classes/AEDOppContactRoleController.cls",
+		"/Users/abrosius/Documents/MavensMate Projects/aed_sandbox/src/classes/AEDAssetUtilities.cls",
+		"/Users/abrosius/Documents/MavensMate Projects/aed_sandbox/src/classes/AEDTestDataGenerator.cls",
+		"/Users/abrosius/Documents/MavensMate Projects/aed_sandbox/src/classes/AEDOpportunityUtilities.cls",
+		"/Users/abrosius/Documents/MavensMate Projects/aed_sandbox/src/classes/AEDTestOpportunityUtilities.cls",
+		"/Users/abrosius/Documents/MavensMate Projects/aed_sandbox/src/classes/AEDTestAssetUtilities.cls",
+		"/Users/abrosius/Documents/MavensMate Projects/aed_sandbox/src/triggers/AEDOpportunity.trigger",
+		"/Users/abrosius/Documents/MavensMate Projects/aed_sandbox/src/classes/AEDOpportunityTriggerHelper.cls",
+		"/Users/abrosius/Documents/MavensMate Projects/aed_sandbox/src/objects/Opportunity.object",
+		"/Users/abrosius/Documents/MavensMate Projects/aed_sandbox/src/classes/AEDTestOpportunityTriggerHelper.cls",
+		"/Users/abrosius/Documents/MavensMate Projects/aed_sandbox/src/classes/AEDTestOpportunityService.cls",
+		"/Users/abrosius/Documents/MavensMate Projects/aed_sandbox/src/classes/AEDCreateAssetsBatch.cls-meta.xml",
+		"/Users/abrosius/Documents/MavensMate Projects/aed_sandbox/src/classes/AEDTestAssetUtilities.cls-meta.xml",
+		"/Users/abrosius/Documents/MavensMate Projects/aed_sandbox/aed_sandbox.sublime-settings",
+		"/Users/abrosius/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/Users/abrosius/Documents/MavensMate Projects/aed_sandbox/src/classes/AEDQuoteFollowUpEmailBatch.cls",
+		"/Users/abrosius/Documents/MavensMate Projects/aed_sandbox/src/classes/AEDUtilities.cls",
+		"/Users/abrosius/Documents/MavensMate Projects/aed_sandbox/src/classes/AEDQuoteFollowUpEmailSched.cls",
+		"/Users/abrosius/Documents/MavensMate Projects/aed_sandbox/src/triggers/AEDOpportunity.trigger-meta.xml",
+		"/Users/abrosius/Documents/MavensMate Projects/aed_sandbox/src/triggers/AEDOpportunityLineItem.trigger",
+		"/Users/abrosius/Documents/MavensMate Projects/aed_sandbox/src/pages/AEDOpptyLineItemList.page",
+		"/Users/abrosius/Documents/MavensMate Projects/aed_sandbox/src/objects/User.object",
+		"/Users/abrosius/Documents/MavensMate Projects/aed_sandbox/src/triggers/AEDAccount.trigger",
+		"/Users/abrosius/Documents/MavensMate Projects/aed_sandbox/src/classes/AEDTestOpptyLineItemListExt.cls",
+		"/Users/abrosius/Documents/MavensMate Projects/aed_sandbox/src/classes/AEDTestPdfController.cls",
+		"/Users/abrosius/Documents/MavensMate Projects/aed_sandbox/src/classes/AEDTestCreateAssetsBatch.cls",
+		"/Users/abrosius/Documents/MavensMate Projects/aed_sandbox/src/classes/AEDTestQuoteFollowUpEmailSched.cls",
+		"/Users/abrosius/Documents/MavensMate Projects/aed_sandbox/src/objects/OpportunityLineItem.object",
+		"/Users/abrosius/Library/Application Support/Sublime Text 3/Packages/MavensMate/mavensmate.sublime-settings",
+		"/Users/abrosius/Documents/MavensMate Projects/aed_sandbox/src/objects/OpportunityContactRole.object",
+		"/Users/abrosius/Documents/MavensMate Projects/aed_sandbox/src/classes/AEDTestOpportunityServiceMock.cls",
+		"/Users/abrosius/Documents/MavensMate Projects/aed_sandbox/src/classes/AEDTestOpportunityUtilities.cls-meta.xml",
+		"/Users/abrosius/Documents/MavensMate Projects/aed_sandbox/src/objects/Account.object",
+		"/Users/abrosius/Documents/MavensMate Projects/aed_sandbox/src/objects/Admin_Credentials__c.object"
+	],
+	"find":
+	{
+		"height": 23.0
+	},
+	"find_in_files":
+	{
+		"height": 93.0,
+		"where_history":
+		[
+			"src/*.cls,src/*.page,src/*.trigger,src/*.component",
+			"src/*.cls,*.page,*.trigger,*.component",
+			"*.cls,*.page,*.trigger,*.component",
+			"*.cls, *.page,*.trigger",
+			"*.cls, *.page,*.trigger,<open files>",
+			"*.cls, *.page,,<open files>",
+			"*.cls, *.page,",
+			"*.cls, *.page, *",
+			"*.cls, *.page,",
+			"*.cls, *.page",
+			".cls, .page",
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"Entity",
+			"catalog",
+			"attachment",
+			"task.",
+			"persona_",
+			"pserona_",
+			"catalog",
+			"catalot",
+			"Product_Master__c",
+			"var",
+			"{!",
+			"<script",
+			"<script>",
+			"HAKA_",
+			"getActivePricebook",
+			"<packageVersions>",
+			"namespace",
+			"users",
+			"viewallusers",
+			"Prepration",
+			"updateReleaseLaunchDate",
+			"escapeSingleQuotes",
+			"escapeSingle",
+			"Product__c",
+			"allProducts",
+			"UR",
+			"market_type__c",
+			"save",
+			"recommendation",
+			"Recommendation",
+			"recommendation",
+			"Recommendation",
+			"recommendation",
+			"Recommendation",
+			"recommendation",
+			"Recommendation__c",
+			"reloadPage",
+			"recommendation",
+			"voc",
+			"VOC",
+			"voc",
+			"controller",
+			"createV",
+			"voc",
+			"crud",
+			"getUserOpenOpportunity",
+			"loadProducts",
+			"selectedOrder",
+			"JobTitle",
+			"actSave",
+			"script",
+			"setHelp",
+			"compile",
+			"prod",
+			"products",
+			"voc",
+			"VOC",
+			"voc",
+			"temp_users",
+			"createProductList",
+			"createAndInsertDependentEntities",
+			"ProductId__c",
+			"master",
+			"THEME",
+			"profile",
+			"Attn",
+			"oppContact",
+			"ATTN",
+			"layout",
+			"email",
+			"^Owner",
+			"^Name",
+			"Dear",
+			"Email_Style__c",
+			"FirstName",
+			"Salutation",
+			"Invoice_Email_Body_Custom__c",
+			"HtmlBody",
+			"htmlBody",
+			"HtmlBody",
+			", ",
+			"SUPPRESS_UPDATE_QOH",
+			"terms__c",
+			"RecordType",
+			"Searching",
+			"RecordTypeId",
+			"RecordType",
+			"recordtype",
+			"Closed Won",
+			"StageName",
+			"Terms",
+			"validation",
+			"ALLOW_",
+			"oppsNewlyClosed",
+			"oppsReopenedFromClosedWon",
+			"oppsReopened",
+			"please",
+			"oppsReopened",
+			";",
+			"isClosedWon",
+			"Close",
+			"createAssetTasks",
+			"oppIdsNewlyMarkedClosedWon",
+			"Id",
+			"Set",
+			"oppsReopened",
+			"closeOpportunity",
+			"asset",
+			"close",
+			"replace",
+			"/**",
+			"salesTax",
+			"Demetrius Balentine, dbalentine@soliantconsulting.com",
+			"ontroller.theDocType",
+			"theDocType",
+			"theId",
+			"System.currentPageReference()",
+			"controller.docType",
+			"AED_PDFController",
+			"/apex/AED_PDF",
+			"AED_PDF",
+			"generatePdfAndSendEmail",
+			"sendRed",
+			"page",
+			"Page",
+			"page",
+			"PageReference",
+			"OpportunityContactRole"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			";\n",
+			"}",
+			">*</",
+			"<?",
+			"/**",
+			"\n        ",
+			"Searching",
+			"\n        ",
+			"<?",
+			"\n        upsert preference;\n",
+			"        AED_Preferences__c preference = AEDTestDataGenerator.createPreferences();\n        insert preference;\n        upsert preference",
+			"        AED_Preferences__c preference = AEDTestDataGenerator.createPreferences();\n        insert preference;\nupsert preference;",
+			"        AED_Preferences__c preference = AEDTestDataGenerator.createPreferences();\n        insert preference;\n",
+			"\n, ",
+			"\nConnectApi.FeedItem["
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 23.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.MavensMate-OutputPanel":
+	{
+		"height": 186.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"project": "student-donor-service.sublime-project",
+	"replace":
+	{
+		"height": 42.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+			[
+				"pcc",
+				"src/classes/HAKA_ProductCatalogController.cls"
+			],
+			[
+				"productca",
+				"src/pages/HAKA_ProductCatalog.page"
+			],
+			[
+				"date",
+				"src/triggers/HAKA_InsertDateCheck.trigger"
+			],
+			[
+				"saleprof",
+				"src/permissionsets/Haka_Sales_Professional.permissionset"
+			],
+			[
+				"salesprofe",
+				"src/profiles/Haka Sales Professional.profile"
+			],
+			[
+				"hakaproductteam",
+				"src/permissionsets/Haka_Product_Team.permissionset"
+			],
+			[
+				"salespro",
+				"src/profiles/Haka Sales Professional.profile"
+			],
+			[
+				"permission",
+				"src/permissionsets/Haka_Product_Team.permissionset"
+			],
+			[
+				"pack",
+				"src/package.xml"
+			],
+			[
+				"idea",
+				"src/objects/Idea.object"
+			],
+			[
+				"pscon",
+				"src/classes/HAKA_ProductSegmentController.cls"
+			],
+			[
+				"trigger",
+				"src/triggers/HAKA_InsertDateCheck.trigger"
+			],
+			[
+				"hakaprofil",
+				"src/profiles/Haka Product Team.profile"
+			],
+			[
+				"haka",
+				"src/classes/HAKA_ProductSegmentController.cls"
+			],
+			[
+				"ps",
+				"src/pages/HAKA_ProductSegment.page"
+			],
+			[
+				"tdg",
+				"src/classes/HAKA_TestDataGenerator.cls"
+			],
+			[
+				"pac",
+				"src/package.xml"
+			],
+			[
+				"productadmin",
+				"src/pages/HAKA_ProductAdmin.page"
+			],
+			[
+				"admin.p",
+				"src/profiles/Admin.profile"
+			],
+			[
+				"ad",
+				"src/profiles/Admin.profile"
+			],
+			[
+				"salesaction",
+				"src/pages/HAKA_SalesActionEdit.page"
+			],
+			[
+				"pacon",
+				"src/classes/HAKA_ProductAdminController.cls"
+			],
+			[
+				"admin",
+				"src/pages/HAKA_ProductAdmin.page"
+			],
+			[
+				"catalog",
+				"src/pages/HAKA_ProductCatalog.page"
+			],
+			[
+				"hpden",
+				"src/pages/HAKA_PersonaDetailEditNew.page"
+			],
+			[
+				"pcata",
+				"src/pages/HAKA_ProductCatalog.page"
+			],
+			[
+				"prodseg",
+				"src/classes/HAKA_ProductSegmentController.cls"
+			],
+			[
+				"tu",
+				"src/classes/HAKA_TestUtility.cls"
+			],
+			[
+				"vrt",
+				"src/pages/HAKA_VOCRecommendationTool.page"
+			],
+			[
+				"vce",
+				"src/classes/HAKA_VOCControllerExtension.cls"
+			],
+			[
+				"",
+				"src/classes/HAKA_TestVOCControllerExtension.cls"
+			],
+			[
+				"tv",
+				"src/classes/HAKA_TestVOCControllerExtension.cls"
+			],
+			[
+				"htidc",
+				"src/classes/HAKA_TestInsertDateCheck.cls"
+			],
+			[
+				"hidc",
+				"src/triggers/HAKA_InsertDateCheck.trigger"
+			],
+			[
+				"haka_productsegmentcontroller",
+				"src/classes/HAKA_ProductSegmentController.cls"
+			],
+			[
+				"pde",
+				"src/classes/HAKA_PersonaDetailEditNewController.cls"
+			],
+			[
+				"csac",
+				"src/classes/HAKA_CloneSalesActionController.cls"
+			],
+			[
+				"csa",
+				"src/pages/HAKA_CloneSalesAction.page"
+			],
+			[
+				"hpc",
+				"src/pages/HAKA_ProductCatalog.page"
+			],
+			[
+				"pden",
+				"src/pages/HAKA_PersonaDetailEditNew.page"
+			],
+			[
+				"vocce",
+				"src/classes/HAKA_VOCControllerExtension.cls"
+			],
+			[
+				"vocrt",
+				"src/pages/HAKA_VOCRecommendationTool.page"
+			],
+			[
+				"pednc",
+				"src/classes/HAKA_PersonaDetailEditNewController.cls"
+			],
+			[
+				"seg",
+				"src/objects/Segment__c.object"
+			],
+			[
+				"pa",
+				"src/package.xml"
+			],
+			[
+				"segment",
+				"src/objects/Segment__c.object"
+			],
+			[
+				"packin",
+				"src/pages/PackingList.page"
+			],
+			[
+				"compcont",
+				"src/classes/AEDPDFCompController.cls"
+			],
+			[
+				"compon",
+				"src/components/AEDPDFQuoteInvoiceComponent.component"
+			],
+			[
+				"aedpdf",
+				"src/pages/AEDPDF.page"
+			],
+			[
+				"model",
+				"src/classes/AED_PDFController_Model.cls"
+			],
+			[
+				"aed_pdfc",
+				"src/classes/AED_PDFController.cls"
+			],
+			[
+				"aed_pdf",
+				"src/pages/AED_PDF.page"
+			],
+			[
+				"opptrigg",
+				"src/triggers/AEDOpportunity.trigger"
+			],
+			[
+				"touti",
+				"src/classes/AEDTestOpportunityUtilities.cls"
+			],
+			[
+				"asseuti",
+				"src/classes/AEDAssetUtilities.cls"
+			],
+			[
+				"opputil",
+				"src/classes/AEDOpportunityUtilities.cls"
+			],
+			[
+				"trigg",
+				"src/classes/AEDOpportunityTriggerHelper.cls"
+			],
+			[
+				"batch",
+				"src/classes/AEDQuoteFollowUpEmailBatch.cls"
+			],
+			[
+				"servic",
+				"src/classes/AEDOpportunityService.cls"
+			],
+			[
+				"aedopportunity",
+				"src/classes/AEDOpportunityTriggerHelper.cls"
+			],
+			[
+				"tolile",
+				"src/classes/AEDTestOpptyLineItemListExt.cls"
+			],
+			[
+				"aedtouti",
+				"src/classes/AEDTestOpportunityUtilities.cls"
+			],
+			[
+				"tcab",
+				"src/classes/AEDTestCreateAssetsBatch.cls"
+			],
+			[
+				"tos",
+				"src/classes/AEDTestOpportunityService.cls"
+			],
+			[
+				"toth",
+				"src/classes/AEDTestOpportunityTriggerHelper.cls"
+			],
+			[
+				"aedtestutil",
+				"src/classes/AEDTestAssetUtilities.cls"
+			],
+			[
+				"opportunity",
+				"src/objects/Opportunity.object"
+			],
+			[
+				"triggerhelp",
+				"src/classes/AEDOpportunityTriggerHelper.cls"
+			],
+			[
+				"opporutil",
+				"src/classes/AEDOpportunityUtilities.cls"
+			],
+			[
+				"accoun.",
+				"src/objects/Account.object"
+			],
+			[
+				"oppserve",
+				"src/classes/AEDOpportunityService.cls"
+			],
+			[
+				"opportuin",
+				"src/objects/Opportunity.object"
+			],
+			[
+				"oppor",
+				"src/classes/AEDOpportunityUtilities.cls"
+			],
+			[
+				"aedoppser",
+				"src/classes/AEDOpportunityService.cls"
+			],
+			[
+				"tqfu",
+				"src/classes/AEDTestQuoteFollowUpEmailBatch.cls"
+			],
+			[
+				"utili",
+				"src/classes/AEDUtilities.cls"
+			],
+			[
+				"sched",
+				"src/classes/AEDQuoteFollowUpEmailSched.cls"
+			],
+			[
+				"assetbat",
+				"src/classes/AEDQuoteFollowUpEmailBatch.cls"
+			],
+			[
+				"creates",
+				"src/classes/AEDCreateAssetsBatch.cls"
+			],
+			[
+				"aedoppserv",
+				"src/classes/AEDOpportunityService.cls"
+			],
+			[
+				"testoppser",
+				"src/classes/AEDTestOpportunityService.cls"
+			],
+			[
+				"aedopportunitytriggerhelper",
+				"src/classes/AEDOpportunityTriggerHelper.cls"
+			],
+			[
+				"opp.trigg",
+				"src/triggers/AEDOpportunity.trigger"
+			],
+			[
+				"assetutil",
+				"src/classes/AEDAssetUtilities.cls"
+			],
+			[
+				"testpdf",
+				"src/classes/AEDTestPdfController.cls"
+			],
+			[
+				"pdfcomp",
+				"src/classes/AEDPDFCompController.cls"
+			],
+			[
+				"oppcon",
+				"src/pages/AEDOppContactRoleSelector.page"
+			],
+			[
+				"testopp",
+				"src/classes/AEDTestOpptyLineItemListExt.cls"
+			],
+			[
+				"opportrigg",
+				"src/triggers/AEDOpportunity.trigger"
+			],
+			[
+				"aedtestass",
+				"src/classes/AEDTestAssetUtilities.cls"
+			],
+			[
+				"aedtestasse",
+				"src/classes/AEDTestAssetUtilities.cls"
+			],
+			[
+				"aedoppo",
+				"src/triggers/AEDOpportunity.trigger"
+			],
+			[
+				"pdfcompo",
+				"src/classes/AEDPDFCompController.cls"
+			],
+			[
+				"compo",
+				"src/components/AEDPDFQuoteInvoiceComponent.component"
+			],
+			[
+				"aed_",
+				"src/classes/AED_PDFController.cls"
+			],
+			[
+				"aotui",
+				"src/classes/AEDOpportunityUtilities.cls"
+			],
+			[
+				"tqf",
+				"src/classes/AEDTestQuoteFollowUpEmailBatch.cls"
+			],
+			[
+				"componen",
+				"src/components/AEDPDFQuoteInvoiceComponent.component"
+			],
+			[
+				"bat",
+				"src/classes/AEDQuoteFollowUpEmailBatch.cls"
+			],
+			[
+				"testda",
+				"src/classes/AEDTestDataGenerator.cls"
+			],
+			[
+				"aeduti",
+				"src/classes/AEDUtilities.cls"
+			],
+			[
+				"testopptrigg",
+				"src/classes/AEDTestOpportunityTriggerHelper.cls"
+			],
+			[
+				"opptrigghelp",
+				"src/classes/AEDOpportunityTriggerHelper.cls"
+			],
+			[
+				"olihelp",
+				"src/classes/AEDOpportunityLineItemHelper.cls"
+			],
+			[
+				"oli",
+				"src/triggers/AEDOpportunityLineItem.trigger"
+			],
+			[
+				"clean",
+				"src/classes/AEDProductExtension.cls"
+			],
+			[
+				"testa",
+				"src/classes/AEDTestAssetUtilities.cls"
+			],
+			[
+				"oppo",
+				"src/objects/Opportunity.object"
+			],
+			[
+				"oth",
+				"src/classes/AEDOpportunityTriggerHelper.cls"
+			],
+			[
+				"oppotrigg",
+				"src/classes/AEDTestOpportunityTriggerHelper.cls"
+			],
+			[
+				"assetbatch",
+				"src/classes/AEDCreateAssetsBatch.cls"
+			],
+			[
+				"asset",
+				"src/classes/AEDCreateAssetsBatch.cls-meta.xml"
+			],
+			[
+				"testdata",
+				"src/classes/AEDTestDataGenerator.cls"
+			],
+			[
+				"servi",
+				"src/classes/AEDOpportunityService.cls"
+			],
+			[
+				"qf",
+				"src/classes/AEDQuoteFollowUpEmailBatch.cls"
+			],
+			[
+				"oppser",
+				"src/classes/AEDOpportunityService.cls"
+			],
+			[
+				"testcont",
+				"src/classes/AEDTestPdfController.cls"
+			],
+			[
+				"controll",
+				"src/classes/AEDPDFCompController.cls"
+			],
+			[
+				"contro",
+				"src/classes/AED_PDFController.cls"
+			],
+			[
+				".",
+				".gitignore"
+			],
+			[
+				"service",
+				"src/classes/AEDOpportunityService.cls"
+			],
+			[
+				"aauti",
+				"src/classes/AEDAssetUtilities.cls"
+			],
+			[
+				"tau",
+				"src/classes/AEDTestAssetUtilities.cls"
+			],
+			[
+				"aouti",
+				"src/classes/AEDOpportunityUtilities.cls"
+			],
+			[
+				"autil",
+				"src/classes/AEDAssetUtilities.cls"
+			],
+			[
+				"aqfobatch",
+				"src/classes/AEDQuoteFollowUpEmailBatch.cls"
+			],
+			[
+				"qfob",
+				"src/classes/AEDTestQuoteFollowUpEmailBatch.cls"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 337.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
