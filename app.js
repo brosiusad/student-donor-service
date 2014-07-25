@@ -39,6 +39,7 @@ var deleteStudent = function(req, res){};
 var createStudent = function(req, res){};
 var updateStudent = function(req, res){
     console.log(req.body);
+    res.send(req.body);
 };
 
 /* DONORS */
