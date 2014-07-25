@@ -102,7 +102,7 @@ app.get('/', function(req, res) {
 });
 
 app.get('/students', listStudents);
-app.get('/student/:id', getStudent);
+app.get('/students/:id', getStudent);
 app.delete('/students/:id', deleteStudent);
 app.post('/students', createStudent);
 app.put('/students/:id', updateStudent);
