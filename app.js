@@ -23,7 +23,10 @@ app.all('*', function(req, res, next){
 });
 
 // Routes
-app.get('/', function(req, res) {res.send('testing')});
+app.get('/', function(req, res) {
+    var result = client.query('SELECT * FROM Student');
+    res.send(result)
+});
 
 
 app.listen(port);

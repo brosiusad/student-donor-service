@@ -32,19 +32,19 @@ var createTripTableQuery =
         end_date date
     )';
 
-var createDonationTableQuery =
-    'CREATE TABLE Donation (
-        id SERIAL PRIMARY KEY,
-        donor_id REFERENCES Donor (id),
-        trip_attendance_id REFERENCES TripAttendance (id),
-        amount NUMERIC(7,2)
-    )';
-
 var createTripAttendanceTableQuery =
     'CREATE TABLE TripAttendance (
         id SERIAL PRIMARY KEY,
-        student_id REFERENCES Student (id),
-        trip_id REFERENCES Trip (id),
+        student_id integer REFERENCES Student (id),
+        trip_id integer REFERENCES Trip (id)
+    )';
+
+var createDonationTableQuery =
+    'CREATE TABLE Donation (
+        id SERIAL PRIMARY KEY,
+        donor_id integer REFERENCES Donor (id),
+        trip_attendance_id integer REFERENCES TripAttendance (id),
+        amount NUMERIC(7,2)
     )';
 
 
