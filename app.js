@@ -75,7 +75,7 @@ var updateStudent = function(req, res){
         } else {
             res.send(JSON.stringify(req.body));
         }
-    });
+    };
 };
 
 /* DONORS */
