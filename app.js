@@ -31,7 +31,7 @@ app.get('/', function(req, res) {
         if (!result) {
           return res.send('No data found');
         } else {
-          res.send('lastname' + row.lastname);
+          res.send('lastname' + result.lastname);
         }
     });
 });
