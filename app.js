@@ -24,8 +24,16 @@ app.all('*', function(req, res, next){
 
 // Routes
 app.get('/', function(req, res) {
-    var result = client.query('SELECT * FROM Student');
-    res.send(result)
+    var query = client.query('SELECT * FROM Student');
+    query.on('row', , function(result) {
+        console.log(result);
+
+        if (!result) {
+          return res.send('No data found');
+        } else {
+          res.send('lastname' + row.lastname);
+        }
+    });
 });
 
 
