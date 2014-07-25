@@ -13,7 +13,7 @@ var createStudentTableQuery =
         age integer
     )';
 
-var createDonorTableQuery
+var createDonorTableQuery =
     'CREATE TABLE Donor (
         id SERIAL PRIMARY KEY,
         firstname text,
@@ -24,7 +24,7 @@ var createDonorTableQuery
         zip text
     )';
 
-var createTripTableQuery
+var createTripTableQuery =
     'CREATE TABLE Trip (
         id SERIAL PRIMARY KEY,
         name text,
@@ -32,7 +32,7 @@ var createTripTableQuery
         end_date date
     )';
 
-var createDonationTableQuery
+var createDonationTableQuery =
     'CREATE TABLE Donation (
         id SERIAL PRIMARY KEY,
         donor_id REFERENCES Donor (id),
@@ -40,7 +40,7 @@ var createDonationTableQuery
         amount NUMERIC(7,2)
     )';
 
-var createTripAttendanceTableQuery
+var createTripAttendanceTableQuery =
     'CREATE TABLE TripAttendance (
         id SERIAL PRIMARY KEY,
         student_id REFERENCES Student (id),
@@ -50,6 +50,7 @@ var createTripAttendanceTableQuery
 
 var client = new pg.Client(connectionString);
 client.connect();
+
 client.query(createStudentTableQuery);
 client.query(createDonorTableQuery);
 client.query(createTripTableQuery);
