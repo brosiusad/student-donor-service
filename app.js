@@ -10,6 +10,8 @@ app.use(bodyParser.json());
 var pg = require('pg');
 var connectionString = process.env.DATABASE_URL || 'postgres://abrosius:@localhost:5432/Student-Donor';
 var client = new pg.Client(connectionString);
+client.on('drain', client.end.bind(client)); //disconnect client when all queries are finished
+
 client.connect(function(err) {
     if (err) {
          return console.error('could not connect to postgres', err);
@@ -43,9 +45,37 @@ var deleteStudent = function(req, res){};
 var createStudent = function(req, res){};
 var updateStudent = function(req, res){
     console.log(req.body);
-    console.log(req.params);
-    console.log(req.query);
-    res.send(JSON.stringify(req.body));
+
+    var student = req.body;
+
+    var queryString = 'UPDATE student SET ' +
+            'firstname = $1, ' +
+            'lastname = $2, ' +
+            'street = $3, ' +
+            'city = $4, ' +
+            'state = $5, ' +
+            'zip = $6, ' +
+            'age = $7 ' +
+            'WHERE id = $8';
+
+    var q = client.query(queryString,
+                    student.firstname,
+                    student.lastname,
+                    student.street,
+                    student.city,
+                    student.state,
+                    student.zip,
+                    student.age,
+                    student.id,
+                    handleResult);
+
+    function handleResult(error, result) {
+        if (error) {
+            res.send(404);
+        } else {
+            res.send(JSON.stringify(req.body));
+        }
+    });
 };
 
 /* DONORS */
