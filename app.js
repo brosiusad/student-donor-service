@@ -25,7 +25,7 @@ app.all('*', function(req, res, next){
 // Routes
 app.get('/', function(req, res) {
     var query = client.query('SELECT * FROM Student');
-    query.on('row', , function(result) {
+    query.on('row', function(result) {
         console.log(result);
 
         if (!result) {
