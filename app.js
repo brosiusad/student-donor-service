@@ -1,7 +1,10 @@
 var express = require('express');
+var bodyParser = require('body-parser');
 var app = express();
-app.use(express.bodyParser());
 var port = process.env.PORT || 3000;
+
+// parse application/json
+app.use(bodyParser.json());
 
 // PostgreSQL setup and connection
 var pg = require('pg');
