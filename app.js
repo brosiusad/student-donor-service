@@ -231,11 +231,20 @@ var updateDonor = function(req, res) {
 
 /* TRIPS */
 
-var listTrips = function(req, res){};
+var listTrips = function(req, res){
+    var row = client.query('SELECT * FROM trip ORDER BY lastname, firstname', function (err, result) {
+        if (err) {
+            res.send(404);
+        } else {
+            res.send(JSON.stringify(result.rows));
+        }
+    });
+};
 
 var getTrip = function(req, res) {
     var row = client.query('SELECT * FROM trip WHERE id = $1', req.params.id, function (err, result) {
         if (err) {
+            console.log(err);
             res.send(404);
         } else {
             res.send(JSON.stringify(result.rows[0]));
@@ -243,9 +252,79 @@ var getTrip = function(req, res) {
     });
 
 };
-var deleteTrip = function(req, res){};
-var createTrip = function(req, res){};
-var updateTrip = function(req, res){};
+var deleteTrip = function(req, res){
+
+    var queryConfig = {
+        text: 'DELETE FROM trip WHERE id = $1',
+        values: [req.params.id]
+    };
+
+    console.log('query: ' + queryConfig.text);
+    console.log(queryConfig.values);
+
+    client.query(queryConfig, function (error, result) {
+        if (error) {
+            console.log('query error: ' + error);
+            res.send(404);
+        } else {
+            console.log(result);
+            res.send(204);
+        }
+    });
+};
+
+var createTrip = function(req, res){
+    console.log(req.body);
+
+    var trip = req.body;
+
+    var queryConfig = {
+        text: 'INSERT INTO trip (name, start_date, end_date) VALUES ($1, $2, $3) RETURNING *',
+        values: [trip.name,
+                trip.start_date,
+                trip.end_date]
+    };
+
+    console.log('query: ' + queryConfig.text);
+    console.log(queryConfig.values);
+
+    client.query(queryConfig, function (error, result) {
+        if (error) {
+            console.log('query error: ' + error);
+            res.send(404);
+        } else {
+            res.send(JSON.stringify(result.rows[0]));
+        }
+    });
+};
+
+var updateTrip = function(req, res) {
+    console.log(req.body);
+
+    var trip = req.body;
+
+    var queryConfig = {
+        text: 'UPDATE trip SET name = $1, start_date = $2, end_date = $3 WHERE id = $4 RETURNING *',
+        values: [trip.name,
+                trip.start_date,
+                trip.end_date,
+                trip.id]
+    };
+
+    console.log('query: ' + queryConfig.text);
+    console.log(queryConfig.values);
+
+    client.query(queryConfig, function (error, result) {
+        if (error) {
+            console.log('query error: ' + error);
+            res.send(404);
+        } else {
+            console.log('no query error');
+            res.send(JSON.stringify(result.rows[0]));
+        }
+    });
+};
+
 
 
 // express setup
