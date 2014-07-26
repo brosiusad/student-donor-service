@@ -10,7 +10,7 @@ app.use(bodyParser.json());
 var pg = require('pg');
 var connectionString = process.env.DATABASE_URL || 'postgres://abrosius:@localhost:5432/Student-Donor';
 var client = new pg.Client(connectionString);
-client.on('drain', client.end.bind(client)); //disconnect client when all queries are finished
+//client.on('drain', client.end.bind(client)); //disconnect client when all queries are finished
 
 client.connect(function(err) {
     if (err) {
@@ -22,7 +22,7 @@ client.connect(function(err) {
 /* STUDENTS */
 
 var listStudents = function(req, res){
-    var row = client.query('SELECT * FROM student', function (err, result) {
+    var row = client.query('SELECT * FROM student ORDER BY lastname, firstname', function (err, result) {
         if (err) {
             res.send(404);
         } else {
@@ -34,6 +34,7 @@ var listStudents = function(req, res){
 var getStudent = function(req, res) {
     var row = client.query('SELECT * FROM student WHERE id = $1', req.params.id, function (err, result) {
         if (err) {
+            console.log(err);
             res.send(404);
         } else {
             res.send(JSON.stringify(result.rows[0]));
@@ -41,50 +42,107 @@ var getStudent = function(req, res) {
     });
 
 };
-var deleteStudent = function(req, res){};
-var createStudent = function(req, res){};
-var updateStudent = function(req, res){
-    console.log(req.body);
+var deleteStudent = function(req, res){
 
-    var student = req.body;
+    var queryConfig = {
+        text: 'DELETE FROM student WHERE id = $1',
+        values: [req.params.id]
+    };
 
-    var queryString = 'UPDATE student SET ' +
-            'firstname = $1, ' +
-            'lastname = $2, ' +
-            'street = $3, ' +
-            'city = $4, ' +
-            'state = $5, ' +
-            'zip = $6, ' +
-            'age = $7 ' +
-            'WHERE id = $8';
+    console.log('query: ' + queryConfig.text);
+    console.log(queryConfig.values);
 
-    var q = client.query(queryString,
-                    student.firstname,
-                    student.lastname,
-                    student.street,
-                    student.city,
-                    student.state,
-                    student.zip,
-                    student.age,
-                    student.id,
-                    handleResult);
-
-    function handleResult(error, result) {
+    client.query(queryConfig, function (error, result) {
         if (error) {
+            console.log('query error: ' + error);
             res.send(404);
         } else {
-            res.send(JSON.stringify(req.body));
+            console.log(result);
+            res.send(204);
         }
+    });
+};
+
+var createStudent = function(req, res){
+    console.log(req.body);
+    console.log('age: ' + req.body.age);
+
+    var student = req.body;
+    console.log('age: ' + student.age);
+
+    var queryConfig = {
+        text: 'INSERT INTO student (firstname, lastname, street, city, state, zip, age) VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING *',
+        values: [student.firstname,
+                student.lastname,
+                student.street,
+                student.city,
+                student.state,
+                student.zip,
+                student.age === '' ? null : student.age]
     };
+
+    console.log('query: ' + queryConfig.text);
+    console.log(queryConfig.values);
+
+    client.query(queryConfig, function (error, result) {
+        if (error) {
+            console.log('query error: ' + error);
+            res.send(404);
+        } else {
+            res.send(JSON.stringify(result.rows[0]));
+        }
+    });
+};
+
+var updateStudent = function(req, res) {
+    console.log(req.body);
+    console.log('age: ' + req.body.age);
+
+    var student = req.body;
+    console.log('age: ' + student.age);
+
+    var queryConfig = {
+        text: 'UPDATE student SET firstname = $1, lastname = $2, street = $3, city = $4, state = $5, zip = $6, age = $7 WHERE id = $8 RETURNING *',
+        values: [student.firstname,
+                student.lastname,
+                student.street,
+                student.city,
+                student.state,
+                student.zip,
+                student.age === '' ? null : student.age,
+                student.id]
+    };
+
+    console.log('query: ' + queryConfig.text);
+    console.log(queryConfig.values);
+
+    client.query(queryConfig, function (error, result) {
+        if (error) {
+            console.log('query error: ' + error);
+            res.send(404);
+        } else {
+            console.log('no query error');
+            res.send(JSON.stringify(result.rows[0]));
+        }
+    });
 };
 
 /* DONORS */
 
-var listDonors = function(req, res){};
+var listDonors = function(req, res){
+    var row = client.query('SELECT * FROM donor ORDER BY lastname, firstname', function (err, result) {
+        if (err) {
+            res.send(404);
+        } else {
+            res.send(JSON.stringify(result.rows));
+        }
+    });
+};
 
 var getDonor = function(req, res) {
     var row = client.query('SELECT * FROM donor WHERE id = $1', req.params.id, function (err, result) {
         if (err) {
+            console.log(err);
             res.send(404);
         } else {
             res.send(JSON.stringify(result.rows[0]));
@@ -92,9 +150,84 @@ var getDonor = function(req, res) {
     });
 
 };
-var deleteDonor = function(req, res){};
-var createDonor = function(req, res){};
-var updateDonor = function(req, res){};
+var deleteDonor = function(req, res){
+
+    var queryConfig = {
+        text: 'DELETE FROM donor WHERE id = $1',
+        values: [req.params.id]
+    };
+
+    console.log('query: ' + queryConfig.text);
+    console.log(queryConfig.values);
+
+    client.query(queryConfig, function (error, result) {
+        if (error) {
+            console.log('query error: ' + error);
+            res.send(404);
+        } else {
+            console.log(result);
+            res.send(204);
+        }
+    });
+};
+
+var createDonor = function(req, res){
+    console.log(req.body);
+
+    var donor = req.body;
+
+    var queryConfig = {
+        text: 'INSERT INTO donor (firstname, lastname, street, city, state, zip) VALUES ($1, $2, $3, $4, $5, $6) RETURNING *',
+        values: [donor.firstname,
+                donor.lastname,
+                donor.street,
+                donor.city,
+                donor.state,
+                donor.zip]
+    };
+
+    console.log('query: ' + queryConfig.text);
+    console.log(queryConfig.values);
+
+    client.query(queryConfig, function (error, result) {
+        if (error) {
+            console.log('query error: ' + error);
+            res.send(404);
+        } else {
+            res.send(JSON.stringify(result.rows[0]));
+        }
+    });
+};
+
+var updateDonor = function(req, res) {
+    console.log(req.body);
+
+    var donor = req.body;
+
+    var queryConfig = {
+        text: 'UPDATE donor SET firstname = $1, lastname = $2, street = $3, city = $4, state = $5, zip = $6 WHERE id = $7 RETURNING *',
+        values: [donor.firstname,
+                donor.lastname,
+                donor.street,
+                donor.city,
+                donor.state,
+                donor.zip,
+                donor.id]
+    };
+
+    console.log('query: ' + queryConfig.text);
+    console.log(queryConfig.values);
+
+    client.query(queryConfig, function (error, result) {
+        if (error) {
+            console.log('query error: ' + error);
+            res.send(404);
+        } else {
+            console.log('no query error');
+            res.send(JSON.stringify(result.rows[0]));
+        }
+    });
+};
 
 /* TRIPS */
 
@@ -125,19 +258,6 @@ app.all('*', function(req, res, next){
 });
 
 // Routes
-app.get('/', function(req, res) {
-    var query = client.query('SELECT * FROM Student');
-    query.on('row', function(row) {
-        console.log(row);
-
-        if (!row) {
-          return res.send('No data found');
-        } else {
-          res.send('lastname' + row.lastname);
-        }
-    });
-});
-
 app.get('/students', listStudents);
 app.get('/students/:id', getStudent);
 app.delete('/students/:id', deleteStudent);
