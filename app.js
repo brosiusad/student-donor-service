@@ -232,7 +232,7 @@ var updateDonor = function(req, res) {
 /* TRIPS */
 
 var listTrips = function(req, res){
-    var row = client.query('SELECT * FROM trip ORDER BY lastname, firstname', function (err, result) {
+    var row = client.query('SELECT * FROM trip ORDER BY name', function (err, result) {
         if (err) {
             res.send(404);
         } else {
