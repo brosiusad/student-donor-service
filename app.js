@@ -281,8 +281,8 @@ var createTrip = function(req, res){
     var queryConfig = {
         text: 'INSERT INTO trip (name, start_date, end_date) VALUES ($1, $2, $3) RETURNING *',
         values: [trip.name,
-                trip.start_date,
-                trip.end_date]
+                trip.start_date === '' ? null : trip.start_date,
+                trip.end_date === '' ? null : trip.end_date]
     };
 
     console.log('query: ' + queryConfig.text);
@@ -306,8 +306,8 @@ var updateTrip = function(req, res) {
     var queryConfig = {
         text: 'UPDATE trip SET name = $1, start_date = $2, end_date = $3 WHERE id = $4 RETURNING *',
         values: [trip.name,
-                trip.start_date,
-                trip.end_date,
+                trip.start_date === '' ? null : trip.start_date,
+                trip.end_date === '' ? null : trip.end_date,
                 trip.id]
     };
 
