@@ -325,7 +325,119 @@ var updateTrip = function(req, res) {
     });
 };
 
+/* Trip Attendances */
 
+var listTripAttendances = function(req, res) {
+
+    // are we querying from a student or donor perspective?
+    var perspective;
+    var theId;
+    if (req.query.studentId) {
+        theId = req.query.studentId;
+        perspective = 'student';
+    } else if (req.query.tripId) {
+        theId = req.query.tripId;
+        perspective = 'trip';
+    } else {
+        //res.send(404);
+    }
+
+    var idSearchTerm = (perspective === 'student' ? 'student_id' : 'trip_id');
+
+    var self = this;
+    var taRows;
+    var donationRows;
+    var results;
+
+    // query for tripattendance rows for student
+    var row = client.query( 'SELECT ' +
+                            '  tripattendance.id id, ' +
+                            '  trip.id trip_id, ' +
+                            '  student.id student_id, ' +
+                            '  trip.name, ' +
+                            '  trip.start_date, ' +
+                            '  trip.end_date, ' +
+                            '  student.firstname, ' +
+                            '  student.lastname, ' +
+                            '  student.city, ' +
+                            '  student.state ' +
+                            'FROM ' +
+                            '  tripattendance, ' +
+                            '  trip, ' +
+                            '  student ' +
+                            'WHERE ' +
+                            '  tripattendance.student_id = student.id AND' +
+                            '  tripattendance.trip_id = trip.id AND ' +
+                            '  ' + idSearchTerm + ' = $1',
+                            theId,
+    function (err, result) {
+        if (err) {
+            console.log(err);
+            res.send(404);
+        } else {
+            // cache query result
+            self.taRows = result.rows;
+            console.log('self.taRows: ' + JSON.stringify(self.taRows));
+            //res.send(JSON.stringify(result.rows));
+
+        }
+    });
+
+    // query for sum of donation amounts per trip for student
+    var row = client.query( 'SELECT ' +
+                            '    sum(amount) total, ' +
+                            '    trip_attendance_id ' +
+                            'FROM ' +
+                            '    donation ' +
+                            'WHERE ' +
+                            '    trip_attendance_id IN (SELECT trip_attendance_id FROM tripattendance WHERE ' + idSearchTerm + ' = $1) ' +
+                            'GROUP BY' +
+                            '    trip_attendance_id ',
+                            theId,
+    function (err, result) {
+        if (err) {
+            console.log(err);
+            res.send(404);
+        } else {
+            self.donationRows = result.rows;
+            console.log('self.donationRows: ' + JSON.stringify(self.donationRows));
+            combineResults();
+            returnResults();
+
+        }
+    });
+
+    // combine results
+    var combineResults = function() {
+        var l = self.taRows.length
+        for (var i = 0; i < l; i++) {
+            console.log('taRow: ' + JSON.stringify(self.taRows[i]));
+            var filteredDonationRows = self.donationRows.filter(function(val, ind, arr) {
+                console.log('val in donationRows: ' + JSON.stringify(val));
+                return val.trip_attendance_id === self.taRows[i].id;
+            }, this);
+
+            console.log('filteredDonationRows: ' + JSON.stringify(filteredDonationRows));
+
+            if (filteredDonationRows.length > 0) {
+                self.taRows[i].total = filteredDonationRows[0].total;
+            } else {
+                self.taRows[i].total = 0;
+            }
+
+        }
+        console.log('taRows: ' + JSON.stringify(self.taRows));
+    }
+
+    var returnResults = function() {
+        if (self.taRows) {
+            res.send(JSON.stringify(self.taRows));
+        } else {
+            res.send(404);
+        }
+    }
+
+}
 
 // express setup
 app.all('*', function(req, res, next){
@@ -355,5 +467,7 @@ app.delete('/trips/:id', deleteTrip);
 app.post('/trips', createTrip);
 app.put('/trips/:id', updateTrip);
 
+app.get('/tripattendances', listTripAttendances);
+//app.get('tripattendances/:id', getTripAttendance);
 
 app.listen(port);
