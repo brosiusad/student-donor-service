@@ -437,7 +437,65 @@ var listTripAttendances = function(req, res) {
         }
     }
 
-}
+};
+
+/* Donations */
+var listDonations = function(req, res) {
+    var studentId = req.query.studentId;
+    var tripId = req.query.tripId;
+    var tripattendanceQuery = (studentId && tripId) ? true : false;
+
+    var queryString =   'SELECT ' +
+                        '   donation.id donation_id, ' +
+                        '   amount, ' +
+                        '   donor_id, ' +
+                        '   donor.firstname donor_firstname, ' +
+                        '   donor.lastname donor_lastname, ' +
+                        '   donor.street, ' +
+                        '   donor.city, ' +
+                        '   donor.state, ' +
+                        '   donor.zip, ' +
+                        '   trip_attendance_id, ' +
+                        '   trip.name trip_name, ' +
+                        '   trip.start_date, ' +
+                        '   trip.end_date, ' +
+                        '   tripattendance.student_id, ' +
+                        '   tripattendance.trip_id, ' +
+                        '   student.lastname student_lastname, ' +
+                        '   student.firstname student_firstname ' +
+                        'FROM ' +
+                        '   donation, ' +
+                        '   donor, ' +
+                        '   tripattendance, ' +
+                        '   trip, ' +
+                        '   student ' +
+                        'WHERE ' +
+                        '   donation.donor_id = donor.id AND ' +
+                        '   donation.trip_attendance_id = tripattendance.id AND ' +
+                        '   tripattendance.trip_id = trip.id AND ' +
+                        '   tripattendance.student_id = student.id ';
+
+    if (tripattendanceQuery) {
+        queryString +=  'AND ' +
+                        '   tripattendance.student_id = $1 AND' +
+                        '   tripattendance.trip_id = $2';
+    }
+
+    if (tripattendanceQuery) {
+        console.log('running query');
+        var query = client.query(queryString, [studentId, tripId], function (err, result) {
+            if (err) {
+                console.log(err);
+                res.send(404);
+            } else {
+                console.log('no error');
+                res.send(JSON.stringify(result.rows));
+            }
+        });
+    }
+
+    console.log(queryString);
+};
 
 // express setup
 app.all('*', function(req, res, next){
@@ -467,7 +525,10 @@ app.delete('/trips/:id', deleteTrip);
 app.post('/trips', createTrip);
 app.put('/trips/:id', updateTrip);
 
+// passed either studentId or tripId as a query param
 app.get('/tripattendances', listTripAttendances);
-//app.get('tripattendances/:id', getTripAttendance);
+
+// optionally passed studentId and tripId as query params to limit query
+app.get('/donations', listDonations);
 
 app.listen(port);
