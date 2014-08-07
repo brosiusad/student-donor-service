@@ -439,6 +439,28 @@ var listTripAttendances = function(req, res) {
 
 };
 
+var createTripAttendance = function(req, res) {
+    var tripattendance = req.body;
+
+    var queryConfig = {
+        text: 'INSERT INTO tripattendance (student_id, trip_id) VALUES ($1, $2) RETURNING *',
+        values: [tripattendance.student_id,
+                tripattendance.trip_id]
+    };
+
+    console.log('query: ' + queryConfig.text);
+    console.log(queryConfig.values);
+
+    client.query(queryConfig, function (error, result) {
+        if (error) {
+            console.log('query error: ' + error);
+            res.send(404);
+        } else {
+            res.send(JSON.stringify(result.rows[0]));
+        }
+    });
+};
+
 /* Donations */
 var listDonations = function(req, res) {
     var studentId = req.query.studentId;
@@ -527,6 +549,7 @@ app.put('/trips/:id', updateTrip);
 
 // passed either studentId or tripId as a query param
 app.get('/tripattendances', listTripAttendances);
+app.post('/tripattendances', createTripAttendance);
 
 // optionally passed studentId and tripId as query params to limit query
 app.get('/donations', listDonations);
