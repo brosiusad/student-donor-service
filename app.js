@@ -461,6 +461,30 @@ var createTripAttendance = function(req, res) {
     });
 };
 
+var deleteTripAttendance = function(req, res) {
+    var tripattendance = req.body;
+
+    var queryConfig = {
+        text: 'DELETE FROM tripattendance WHERE id = $1',
+        values: [req.params.id]
+    };
+
+    console.log('query: ' + queryConfig.text);
+    console.log(queryConfig.values);
+
+    client.query(queryConfig, function (error, result) {
+        if (error) {
+            // TODO: find and delete all donation records with a ref. to this tripattendance record
+
+            console.log('query error: ' + error);
+            res.send(404);
+        } else {
+            console.log(result);
+            res.send(204);
+        }
+    });
+};
+
 /* Donations */
 var listDonations = function(req, res) {
     var studentId = req.query.studentId;
@@ -550,6 +574,7 @@ app.put('/trips/:id', updateTrip);
 // passed either studentId or tripId as a query param
 app.get('/tripattendances', listTripAttendances);
 app.post('/tripattendances', createTripAttendance);
+app.delete('/tripattendances/:id', deleteTripAttendance);
 
 // optionally passed studentId and tripId as query params to limit query
 app.get('/donations', listDonations);
