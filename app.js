@@ -489,7 +489,10 @@ var deleteTripAttendance = function(req, res) {
 var listDonations = function(req, res) {
     var studentId = req.query.studentId;
     var tripId = req.query.tripId;
+    var donorId = req.query.donorId;
+
     var tripattendanceQuery = (studentId && tripId) ? true : false;
+    var donorQuery = donorId ? true : false;
 
     var queryString =   'SELECT ' +
                         '   donation.id donation_id, ' +
@@ -525,9 +528,7 @@ var listDonations = function(req, res) {
         queryString +=  'AND ' +
                         '   tripattendance.student_id = $1 AND' +
                         '   tripattendance.trip_id = $2';
-    }
 
-    if (tripattendanceQuery) {
         console.log('running query');
         var query = client.query(queryString, [studentId, tripId], function (err, result) {
             if (err) {
@@ -538,6 +539,23 @@ var listDonations = function(req, res) {
                 res.send(JSON.stringify(result.rows));
             }
         });
+
+    } else if (donorId) {
+        queryString +=  'AND ' +
+                        '   donation.donor_id = $1';
+
+        console.log('running query');
+        var query = client.query(queryString, [donorId], function (err, result) {
+            if (err) {
+                console.log(err);
+                res.send(404);
+            } else {
+                console.log('no error');
+                res.send(JSON.stringify(result.rows));
+            }
+        });
+    } else {
+        res.send(404);
     }
 
     console.log(queryString);
