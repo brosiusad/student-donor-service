@@ -1,0 +1,36 @@
+CREATE TABLE Student (
+id SERIAL PRIMARY KEY,
+firstname text,
+lastname text NOT NULL,
+street text,
+city text,
+state text,
+zip text,
+age integer);
+
+CREATE TABLE Donor (
+id SERIAL PRIMARY KEY,
+firstname text,
+lastname text NOT NULL,
+street text,
+city text,
+state text,
+zip text);
+
+CREATE TABLE Trip (
+id SERIAL PRIMARY KEY,
+name text,
+start_date date,
+end_date date);
+
+CREATE TABLE TripAttendance (
+id SERIAL PRIMARY KEY,
+student_id integer REFERENCES Student (id) ON DELETE CASCADE,
+trip_id integer REFERENCES Trip (id) ON DELETE CASCADE);
+
+CREATE TABLE Donation (
+id SERIAL PRIMARY KEY,
+donor_id integer REFERENCES Donor (id) ON DELETE CASCADE,
+trip_attendance_id integer REFERENCES TripAttendance (id) ON DELETE CASCADE,
+amount NUMERIC(7,2));
+

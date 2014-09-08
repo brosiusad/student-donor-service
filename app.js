@@ -8,7 +8,7 @@ app.use(bodyParser.json());
 
 // PostgreSQL setup and connection
 var pg = require('pg');
-var connectionString = process.env.DATABASE_URL || 'postgres://abrosius:@localhost:5432/Student-Donor';
+var connectionString = process.env.DATABASE_URL || 'postgres://postgres:@localhost:5432/Student-Donor';
 var client = new pg.Client(connectionString);
 //client.on('drain', client.end.bind(client)); //disconnect client when all queries are finished
 
@@ -542,7 +542,8 @@ var listDonations = function(req, res) {
 
     } else if (donorId) {
         queryString +=  'AND ' +
-                        '   donation.donor_id = $1';
+                        '   donation.donor_id = $1 ' +
+                        '   ORDER BY trip.start_date';
 
         console.log('running query');
         var query = client.query(queryString, [donorId], function (err, result) {
