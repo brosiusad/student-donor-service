@@ -523,7 +523,7 @@
 			"file": "app.js",
 			"settings":
 			{
-				"buffer_size": 3281,
+				"buffer_size": 18329,
 				"line_ending": "Unix"
 			}
 		},
@@ -556,9 +556,13 @@
 	"build_system": "",
 	"command_palette":
 	{
-		"height": 67.0,
+		"height": 400.0,
 		"selected_items":
 		[
+			[
+				"git",
+				"GitGutter: Compare Against HEAD"
+			],
 			[
 				"block",
 				"Toggle Block Comment"
@@ -1020,7 +1024,7 @@
 				"Package Control: Install Package"
 			]
 		],
-		"width": 593.0
+		"width": 601.0
 	},
 	"console":
 	{
@@ -1038,6 +1042,10 @@
 		"side_bar_visible": false,
 		"status_bar_visible": false
 	},
+	"expanded_folders":
+	[
+		"/Users/artiebrosius/Documents/Heroku Projects/student-donor-service"
+	],
 	"file_history":
 	[
 		"/Users/abrosius/Documents/Heroku Projects/student-donor-service/package.json",
@@ -1366,15 +1374,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 3281,
+						"buffer_size": 18329,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1160,
-								1160
+								4795,
+								4827
 							]
 						],
 						"settings":
@@ -1439,11 +1447,11 @@
 							"auto_name": "",
 							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
 						},
-						"translation.x": -0.0,
+						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 2,
 					"type": "text"
 				},
 				{
@@ -1466,11 +1474,11 @@
 						{
 							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
 						},
-						"translation.x": 201.0,
+						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 1,
 					"type": "text"
 				}
 			]
@@ -2057,6 +2065,7 @@
 		],
 		"width": 0.0
 	},
+	"selected_group": 0,
 	"settings":
 	{
 	},

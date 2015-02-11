@@ -495,7 +495,7 @@ var listDonations = function(req, res) {
     var donorQuery = donorId ? true : false;
 
     var queryString =   'SELECT ' +
-                        '   donation.id donation_id, ' +
+                        '   donation.id id, ' +
                         '   amount, ' +
                         '   donor_id, ' +
                         '   donor.firstname donor_firstname, ' +
@@ -562,6 +562,53 @@ var listDonations = function(req, res) {
     console.log(queryString);
 };
 
+var createDonation = function(req, res) {
+    var donation = req.body;
+
+    var queryConfig = {
+        text: 'INSERT INTO donation (trip_attendance_id, donor_id, amount) VALUES ($1, $2, $3) RETURNING *',
+        values: [donation.trip_attendance_id,
+                donation.donor_id,
+                donation.amount]
+    };
+
+    console.log('query: ' + queryConfig.text);
+    console.log(queryConfig.values);
+
+    client.query(queryConfig, function (error, result) {
+        if (error) {
+            console.log('query error: ' + error);
+            res.send(404);
+        } else {
+            res.send(JSON.stringify(result.rows[0]));
+        }
+    });
+
+};
+
+var deleteDonation = function(req, res) {
+    var donation = req.body;
+
+    var queryConfig = {
+        text: 'DELETE FROM donation WHERE id = $1',
+        values: [req.params.id]
+    };
+
+    console.log('query: ' + queryConfig.text);
+    console.log(queryConfig.values);
+
+    client.query(queryConfig, function (error, result) {
+        if (error) {
+
+            console.log('query error: ' + error);
+            res.send(404);
+        } else {
+            console.log(result);
+            res.send(204);
+        }
+    });
+};
+
 // express setup
 app.all('*', function(req, res, next){
   res.header("Access-Control-Allow-Origin", "*");
@@ -592,10 +639,14 @@ app.put('/trips/:id', updateTrip);
 
 // passed either studentId or tripId as a query param
 app.get('/tripattendances', listTripAttendances);
+
 app.post('/tripattendances', createTripAttendance);
 app.delete('/tripattendances/:id', deleteTripAttendance);
 
 // optionally passed studentId and tripId as query params to limit query
 app.get('/donations', listDonations);
+
+app.post('/donations', createDonation);
+app.delete('/donations/:id', deleteDonation);
 
 app.listen(port);
