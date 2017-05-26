@@ -8,8 +8,15 @@ app.use(bodyParser.json());
 
 // PostgreSQL setup and connection
 var pg = require('pg');
-var connectionString = process.env.DATABASE_URL || 'postgres://postgres:@localhost:5432/Student-Donor';
-var client = new pg.Client(connectionString);
+//var connectionString = process.env.DATABASE_URL || 'postgres://postgres:postgres@localhost:5432/Student-Donor';
+var config = {
+    user: 'postgres',
+    password: 'postgres',
+    database: 'Student-Donor',
+    port: 5432,
+    host: 'localhost'
+}
+var client = new pg.Client(config);
 //client.on('drain', client.end.bind(client)); //disconnect client when all queries are finished
 
 client.connect(function(err) {
@@ -32,7 +39,8 @@ var listStudents = function(req, res){
 };
 
 var getStudent = function(req, res) {
-    var row = client.query('SELECT * FROM student WHERE id = $1', req.params.id, function (err, result) {
+    console.log(req.params.id);
+    var row = client.query('SELECT * FROM student WHERE id = $1', [req.params.id], function (err, result) {
         if (err) {
             console.log(err);
             res.send(404);
@@ -140,7 +148,7 @@ var listDonors = function(req, res){
 };
 
 var getDonor = function(req, res) {
-    var row = client.query('SELECT * FROM donor WHERE id = $1', req.params.id, function (err, result) {
+    var row = client.query('SELECT * FROM donor WHERE id = $1', [req.params.id], function (err, result) {
         if (err) {
             console.log(err);
             res.send(404);
@@ -242,7 +250,7 @@ var listTrips = function(req, res){
 };
 
 var getTrip = function(req, res) {
-    var row = client.query('SELECT * FROM trip WHERE id = $1', req.params.id, function (err, result) {
+    var row = client.query('SELECT * FROM trip WHERE id = $1', [req.params.id], function (err, result) {
         if (err) {
             console.log(err);
             res.send(404);
@@ -369,7 +377,7 @@ var listTripAttendances = function(req, res) {
                             '  tripattendance.student_id = student.id AND' +
                             '  tripattendance.trip_id = trip.id AND ' +
                             '  ' + idSearchTerm + ' = $1',
-                            theId,
+                            [theId],
     function (err, result) {
         if (err) {
             console.log(err);
@@ -393,7 +401,7 @@ var listTripAttendances = function(req, res) {
                             '    trip_attendance_id IN (SELECT trip_attendance_id FROM tripattendance WHERE ' + idSearchTerm + ' = $1) ' +
                             'GROUP BY' +
                             '    trip_attendance_id ',
-                            theId,
+                            [theId],
     function (err, result) {
         if (err) {
             console.log(err);

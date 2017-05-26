@@ -1,5 +1,6 @@
 var pg = require('pg');
 var connectionString = process.env.DATABASE_URL || 'postgres://localhost:5432/abrosius';
+console.log(connectionString);
 
 var createStudentTableQuery =
     'CREATE TABLE Student (
@@ -35,15 +36,15 @@ var createTripTableQuery =
 var createTripAttendanceTableQuery =
     'CREATE TABLE TripAttendance (
         id SERIAL PRIMARY KEY,
-        student_id integer REFERENCES Student (id),
-        trip_id integer REFERENCES Trip (id)
+        student_id integer REFERENCES Student (id) ON DELETE CASCADE,
+        trip_id integer REFERENCES Trip (id) ON DELETE CASCADE
     )';
 
 var createDonationTableQuery =
     'CREATE TABLE Donation (
         id SERIAL PRIMARY KEY,
-        donor_id integer REFERENCES Donor (id),
-        trip_attendance_id integer REFERENCES TripAttendance (id),
+        donor_id integer REFERENCES Donor (id) ON DELETE CASCADE,
+        trip_attendance_id integer REFERENCES TripAttendance (id) ON DELETE CASCADE,
         amount NUMERIC(7,2)
     )';
 

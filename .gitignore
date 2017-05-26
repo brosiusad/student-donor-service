@@ -1,3 +1,4 @@
 *.sublime-project
 *.sublime-workspace
 *.sublime-settings
+node_modules
